@@ -1,13 +1,13 @@
 /**
  * Created by PagNi1731620 on 2018-02-01.
  */
-public abstract class Personnages {
+public abstract class Personnage {
     private int hp=0;
     private int Def=0;
     private String nom="a";
 
-    public abstract void attaque(Personnages personnages);
-    public abstract void esquive(Personnages personnages);
+    public abstract void attaque(Personnage personnage);
+    public abstract void esquive(Personnage personnage);
 
     public int getHp() {return hp;}
     public int getDef() {return Def;}

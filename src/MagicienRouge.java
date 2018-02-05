@@ -7,5 +7,7 @@ public class MagicienRouge extends Magicien {
         setDef(1);
         setNbePtsMagie(40);
         setNom("Magicien Rouge");
+        getTabSort()[0]=new Empoisonnement();
+        getTabSort()[1]=new MortSubite();
     }
 }

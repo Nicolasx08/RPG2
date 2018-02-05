@@ -1,14 +1,15 @@
 /**
  * Created by PagNi1731620 on 2018-02-01.
  */
-public  class Guerrier extends Personnages {
+public  class Guerrier extends Personnage {
 
     private int force=0;
 
-    public void attaque(Personnages personnages){
-        personnages.setHp((getForce()*2)-personnages.getDef());
+    public void attaque(Personnage personnage){
+
+        personnage.setHp(personnage.getHp() - ((getForce()*2)- personnage.getDef()));
     }
-    public void esquive(Personnages personnages){
+    public void esquive(Personnage personnage){
 
     }
     public int getForce() {return force;}
