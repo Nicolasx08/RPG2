@@ -1,3 +1,5 @@
+import personnage.*;
+import armes.*;
 import java.util.Scanner;
 
 /**
@@ -11,6 +13,7 @@ public class LeCombatFatal {
         boolean fin =false;
         int tour=0;
         Personnage personnages[]=new Personnage[2];
+        int choixArme=0;
         for (int i=0;i<2;i++){
             System.out.println("Choisissez vos combattants!");
             System.out.println("1- Barbare");
@@ -20,15 +23,40 @@ public class LeCombatFatal {
             rep=sc.nextInt();
             if (rep<=4 && rep>=1){
                     switch (rep){
-                        case 1: personnages[i]= new Barbare();
+                        case 1: personnages[i]= new Barbare(new Masse());
                         break;
-                        case 2: personnages[i]= new Paladin();
+                        case 2: personnages[i]= new Barbare(new ÉpéeLourde());
                         break;
-                        case 3: personnages[i]=new MagicienNoir();
+                        case 3: personnages[i]= new Barbare(new Sceptre());
+                            break;
+                        case 4: personnages[i]= new Barbare(new Masamune());
+                            break;
+                        case 5: personnages[i]= new Paladin(new Épée());
                         break;
-                        case 4: personnages[i]=new MagicienRouge();
+                        case 6: personnages[i]= new Paladin(new ÉpéeMagique());
+                            break;
+                        case 7: personnages[i]= new Paladin(new ÉpéeLourde());
+                            break;
+                        case 8: personnages[i]= new Paladin(new Masamune());
+                            break;
+                        case 9: personnages[i]=new MagicienNoir(new Baguette());
                         break;
+                        case 10: personnages[i]=new MagicienNoir(new ÉpéeMagique());
+                            break;
+                        case 11: personnages[i]=new MagicienNoir(new Sceptre());
+                            break;
+                        case 12: personnages[i]=new MagicienNoir(new Masamune());
+                            break;
+                        case 13: personnages[i]=new MagicienRouge(new Baguette());
+                            break;
+                        case 14: personnages[i]=new MagicienRouge(new ÉpéeMagique());
+                            break;
+                        case 15: personnages[i]=new MagicienRouge(new Sceptre());
+                            break;
+                        case 16: personnages[i]=new MagicienRouge(new Masamune());
+                            break;
                     }
+
             }
             else {
                 System.out.println("Entrez un chiffre valide.");
@@ -51,15 +79,10 @@ public class LeCombatFatal {
                 Magicien magicien= (Magicien) personnages[0];
                 Magicien magicien1 =(Magicien)personnages[1];
                 if (magicien.getNbePtsMagie()==0 && magicien1.getNbePtsMagie()==0){
-                    System.out.println("Match nulle!");
+                    System.out.println("Match nul!");
                     fin=true;
                 }
             }
         }
-
-
-
-
-
     }
 }

@@ -1,3 +1,7 @@
+package personnage;
+
+import sort.Sort;
+
 /**
  * Created by PagNi1731620 on 2018-02-01.
  */
@@ -11,14 +15,12 @@ public class Magicien extends Personnage {
     public void attaque(Personnage personnage) {
         int random=(int)(Math.random()*2);
         if (nbePtsMagie>=tabSort[random].getCout()) {
-            tabSort[random].lancerSort(personnage);
+            tabSort[random].lancerSort(personnage,this);
             nbePtsMagie-=tabSort[random].getCout();
         }
         else {
             System.out.println("Vous n'avez pas assez de mana");
         }
-    }
-    public void esquive(Personnage personnage) {
     }
 
     public Sort[] getTabSort() {

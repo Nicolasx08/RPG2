@@ -1,3 +1,5 @@
+package personnage;
+
 /**
  * Created by PagNi1731620 on 2018-02-01.
  */
@@ -7,7 +9,7 @@ public  class Guerrier extends Personnage {
 
     public void attaque(Personnage personnage){
 
-        personnage.setHp(personnage.getHp() - ((getForce()*2)- personnage.getDef()));
+        personnage.setHp(personnage.getHp() - (((getForce()*2)- personnage.getDef()))+getDegat());
     }
     public void esquive(Personnage personnage){
 
