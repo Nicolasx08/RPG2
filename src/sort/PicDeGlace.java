@@ -12,7 +12,7 @@ public class PicDeGlace extends Sort {
     }
 
     public void lancerSort(Personnage personnage, Magicien magicien) {
-        personnage.setHp(personnage.getHp()-((7- personnage.getDef())+magicien.getDegat()));
-        System.out.println("Vous avez attaquer de "+((7- personnage.getDef()))+magicien.getDegat());
+        personnage.setHp(personnage.getHp()-(7- personnage.getDef()+magicien.getDegat()));
+        System.out.println("Vous avez attaquer de "+((7- personnage.getDef()+magicien.getDegat())));
     }
 }

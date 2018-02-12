@@ -12,8 +12,8 @@ public class Empoisonnement extends Sort {
         setCout(2);
     }
     public void lancerSort(Personnage personnage, Magicien magicien) {
-        personnage.setHp(personnage.getHp()-(2*nbeEmpoisonnement)+magicien.getDegat());
-        System.out.println("Vous avez attaqué de "+(2*nbeEmpoisonnement)+magicien.getDegat());
+        personnage.setHp(personnage.getHp()-((2*nbeEmpoisonnement)+magicien.getDegat()));
+        System.out.println("Vous avez attaqué de "+((2*nbeEmpoisonnement)+magicien.getDegat()));
     nbeEmpoisonnement++;
     }
 }
